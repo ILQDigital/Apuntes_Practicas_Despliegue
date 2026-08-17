@@ -11,7 +11,9 @@ Los ficheros están estructurados de forma secuencial: cada capítulo amplía lo
 - [3.Docker.md](3.Docker.md): Fundamentos de Docker: diferencia entre **Dockerfile, imagen y contenedor**. Instalación, permisos de usuario y comandos más usados.
 - [4.N8n_Docker.md](4.N8n_Docker.md): Despliegue de **n8n con `docker-compose`**, solución de errores de permisos (`EACCES`) y cifrado HTTPS con Cloudflare Tunnel.
 - [5.App_web_Docker.md](5.App_web_Docker.md): Despliegue de una **aplicación web propia con `Dockerfile` y `docker run`**, gestión de volúmenes persistentes y procedimiento de actualización.
-- [6.Backup.md](6.Backup.md): Creación de copias de seguridad comprimidas (`.tar.gz`) de los datos persistentes de los contenedores y su descarga al PC local.
+- [6.Crear_web_Docker.md](6.Crear_web_Docker.md): Migración y despliegue de un sitio **WordPress con MariaDB y `docker-compose`**, resolución de errores comunes y vinculación con Cloudflare.
+- [Backup.md](Backup.md): Guía completa para **copias de seguridad (backups)** de datos persistentes (`.tar.gz`), volcado de bases de datos SQL (`mysqldump`) y descarga remota vía `scp`.
+- [Cloudflare.md](Cloudflare.md): Guía explicativa para principiantes sobre **Cloudflare y Cloudflare Tunnels**, desde conectar el dominio hasta configurar las rutas de aplicación para los contenedores Docker.
 
 ## Los dos modelos de despliegue
 
