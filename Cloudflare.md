@@ -102,9 +102,14 @@ En la pestaña **Public Hostname** de tu túnel en Cloudflare Zero Trust, haz cl
 
 A lo largo de nuestros apuntes y despliegues, Cloudflare se ha utilizado de la siguiente forma:
 
-- 📄 **[4.N8n_Docker.md](4.N8n_Docker.md)**: Instalamos `cloudflared` por primera vez en el VPS y configuramos el primer subdominio (`n8n.midominio.es`) para acceder de forma segura por HTTPS a la plataforma de automatizaciones en el puerto `5678`.
-- 📄 **[5.App_web_Docker.md](5.App_web_Docker.md)**: Reutilizamos el túnel creado anteriormente sin necesidad de instalar nada nuevo en el VPS, agregando un segundo *Public Hostname* (`app.midominio.es`) apuntando al puerto `8080`.
-- 📄 **[6.Crear_web_Docker.md](6.Crear_web_Docker.md)**: Eliminamos los registros A/CNAME antiguos que apuntaban a un hosting viejo y asociamos el dominio principal a la web migrada en WordPress en el puerto `8081`.
+Se instala **una sola vez** (paso 2) y después solo se añaden hostnames:
+
+- 📄 **[4.N8n_Docker.md](4.N8n_Docker.md)**: n8n en el puerto `5678`.
+- 📄 **[5.App_web_Docker.md](5.App_web_Docker.md)**: app Python (`app.midominio.es`) en el puerto `8080`.
+- 📄 **[6.Crear_web_Docker.md](6.Crear_web_Docker.md)**: WordPress en el puerto `8081`. Si migras desde otro hosting, borra antes los registros A/CNAME antiguos.
+
+> [!TIP]
+> Los contenedores publican sus puertos como `127.0.0.1:PUERTO:PUERTO`. Así solo `cloudflared` (que corre en el mismo VPS) puede llegar a ellos.
 
 ---
 
